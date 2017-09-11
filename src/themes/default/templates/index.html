@@ -1,0 +1,10 @@
+
+<%inherit file="base.html" />
+
+<%block name="content">
+% for post in post_embeds:
+        ${post}
+        <div class="ui divider"></div>
+% endfor
+
+</%block>

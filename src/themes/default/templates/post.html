@@ -1,0 +1,24 @@
+<div class="ui fluid card">
+  <div class="content">
+    <div class="right floated meta">14h</div>
+      From: <a class="ui image label">
+          <img src="/static/semantic/elliot.jpg">
+          Aiden Bell
+        </a>
+      % if subject:
+      <div class="subject">
+          <span>Subject:</span> ${subject}
+      </div>
+      % endif
+  </div>
+  <div class="content">
+        ${body}
+        % for image in images:
+        <img src="${image.uri}" />
+        % endfor
+
+        % for urlp in url_previews:
+        ${urlp.render()}
+        % endfor
+  </div>
+</div>
